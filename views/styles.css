@@ -1,0 +1,100 @@
+dv#linksBar {display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-between;
+} 
+img#logo {
+
+    width: 80vw;
+}
+
+div#icon {
+        
+display: flex;
+        
+align-items: center;
+        
+justify-content: space-around;
+}
+div#product {
+    display: flex;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;}
+    
+div#variants {
+    display:none;
+}
+
+
+div#quantity {
+    padding-top: 20%;
+}
+
+div#btnSettings {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-end;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.button,input[type="button"], input[type=""],input[type="submit"] {
+    background-color: #87CEEB; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .button:hover,input[type="button"]:hover, input[type=""]:hover,input[type="submit"]:hover{
+    background-color: #12b1f0; /* Green */
+ 
+  }
+
+  .input#producttitle {
+display: none;  
+}
+img#productimage {
+ width:45%;     
+}
+form#productForm {
+    display: grid;
+    align-content: space-around;
+    justify-content: space-around;
+    align-items: center;
+    justify-items: stretch;
+}
+div#itemPage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 10px;
+    align-content: space-around;
+    align-items: stretch;
+}
+div#text {
+    padding-left: 10px;
+}
+
+div#linksBar {
+    background-color: #87CEEB;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+h1{
+    display: flex;
+    align-content: stretch;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
