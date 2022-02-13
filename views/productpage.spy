@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>TCG Admin APP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+
+<div id="icon"><img src="https://cdn.glitch.com/26177e04-0027-4d57-924a-64ba8a938709%2FtrevorIcon.jpg?v=1627826527231" id = "logo"></div>
+<h1>Product Page</h1>
+
+<div id="linksBar">
+
+<div id = "link">  
+  <a href="/" class="button">Home</a> </div> 
+   
+  <div id = "link">
+    <a href="/Stock" class="button"> Stock</a>
+  </div>
+  <div id = "link">
+  <a href = "/reports" class="button"> Report </a>
+  </div>
+  <div id = "link">
+  <a href = "/additem" class="button"> AddItem </a>
+</div>
+</div>
+
+<form id = "productForm" action = "../item/editItem" method = "post" > 
+
+<input type = "hidden" value = {{itemCode}} id = "itemCode" name = "itemCode">
+
+<div id = "product">{{image}}</div>
+<h1 id ='producttitleheader'> {{producttitle}}</h1>
+<a onclick="displayVariants()" class="button" >Show/Hide Variants</a> </div> 
+<div id = "variants" style = "display: none;">{{variants}}</div>
+<div id = "mainbody" style = "display: grid;">\
+<h3> {{producttype}}</h3>
+<h3 id = "statusheader">Product Status: {{status}}</h3>
+<div id = "vendorTitle"> {{vendor}}</div> <p>
+<div id = "body" name = "body" style="display: bock;"> Description {{description}}</div>
+<div> <div id = "tag"> Tags {{tags}}</div>
+<div id = "stock"> 
+
+</DIV>
+</div>
+
+
+
+
+<DIV ID = "btnSettings">
+<label for="producttitle" id="producttitle1"  name= "producttitle" style="display: none;"> Title:</label>
+<input type = "text" id = "producttitle" name = "producttitle" value = "{{producttitle}}" style="
+    display: none;
+    ">  <input type="button" value ="Change Product Title" onclick="unhide('producttitle','producttitleheader')"> 
+
+
+
+<label for="status" id="status1" = "producttitle style="display: none;"> Status:</label>
+<select id = "status" name = "status" style="
+    display: none;
+">
+    <option value="DRAFT" {{select1}} >Draft</option>
+    <option value="ACTIVE" {{select2}}> Active </option>
+  </select>
+
+  <input type="button" value ="Change Status" onclick="unhide('status','statusheader')">
+
+<label for="vendor" id="vendor1"  name= "vendor" style="display: none;"> Vendor:</label>
+<input type = "text" id = "vendor" name = "vendor" value = "{{vendor}}" style="
+    display: none;
+    ">  <input type="button" value ="Change Vendor" onclick="unhide('vendor','vendorTitle')"> 
+
+
+
+<label for="description" id="description1" = "producttitle style="display: none;"> Description:</label>
+<textarea id = "description" name = "description" style = "display: none;"> {{description}}</textarea>
+<input type="button" value ="Change Description" onclick="unhide('description','body')"> 
+ 
+
+<label for="tags" id="tags1" = "producttitle style="display: none;"> Tags seperated by commas:</label>
+<input type = "text" id = "tags" name = "tags" value = "{{tags}}" style="
+    display: none;
+    ">
+
+<input type="button" value ="Change tags" onclick="unhide('tags','tag')">
+
+
+
+
+<input type = "submit">
+</div>
+</form>
+
+
+
+<script>
+function displayVariants(){
+var x = document.getElementById("variants");
+if(x.style.display == "none"){
+x.style.display = "grid";} else {
+  x.style.display = "none";
+}
+
+}
+function unhide(id,id2)
+{
+  var x = document.getElementById(id);
+  var x1 = document.getElementById(id + 1);
+
+  x.style.display = "block";
+   x1.style.display = "block";
+  
+    var y = document.getElementById(id2);
+
+  y.style.display = "none";
+ 
+}
+
+</script>
